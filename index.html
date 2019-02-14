@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>三合一收款码生成</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <style>
+        .preview{
+            width:100%;
+            height:80px;
+            display: none;
+        }
+        input[type=file]{
+            display: none;
+        }
+
+        button{
+            position: relative;
+        }
+        div,button{
+            margin-top:10px;
+        }
+        @media only screen and (min-width: 700px){
+            input[type=text]{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content layui-container">
+        <div class="layui-row">
+            <h1 align="center">三合一收款码</h1>
+        </div>
+        <hr>
+        <div class="layui-row">
+            <div class="layui-col-md8 layui-col-md-offset2 layui-col-xs12">
+                <input type="text" placeholder="收款名称，尽量在4个字以内" id="username" class="layui-input">
+
+
+                <input type="file" onchange="preview(this,'file-url','AL')" id="AL" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
+                <div class="layui-col-md9 layui-col-xs12">
+                    <input type="text" required  lay-verify="required" disabled="disabled" placeholder="请点按钮上传支付宝收款码" class="AL layui-input url-input">
+                </div>
+                <button onclick="document.getElementById('AL').click(); " class="btn layui-btn layui-col-md3 layui-col-xs12">选择支付宝收款码</button>
+
+
+                <input type="file" onchange="preview(this,'file-url','WX')" id="WX" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
+                <div class="layui-col-md9 layui-col-xs12">
+                    <input type="text" required  lay-verify="required" disabled="disabled" placeholder="请点按钮上传微信收款码" class="WX layui-input url-input">
+                </div>
+                <button onclick="document.getElementById('WX').click(); " class="btn layui-btn layui-col-md3 layui-col-xs12">选择微信收款码</button>
+
+
+                <input type="file" onchange="preview(this,'file-url','QQ')" id="QQ" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
+                <div class="layui-col-md9 layui-col-xs12">
+                    <input type="text" required  lay-verify="required" disabled="disabled" placeholder="请点按钮上传QQ收款码" class="QQ layui-input url-input">
+                </div>
+                <button onclick="document.getElementById('QQ').click(); " class="btn layui-btn layui-col-md3 layui-col-xs12">选择QQ收款码</button>
+            </div>
+        </div>
+        <div class="layui-row">
+            <button onclick="upload()" 	class="layui-btn layui-btn-normal layui-col-md8 layui-col-md-offset2 layui-col-xs12">开始制作专属三合一二维码</button>
+        </div>
+        <div class="" id="qrcode" style="display: none"></div>
+        <canvas id="result" width="900" height="1130" style="display: none">
+
+        </canvas>
+        <img src="back.png" style="display: none" alt="">
+        <div class="layui-col-md8 layui-col-md-offset2 layui-col-xs12">
+            <img src="" id="show" alt="" width="100%">
+        </div>
+
+    </div>
+
+
+
+    <!--                    js代码部分                   -->
+    <script src="js/llqrcode.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/analyticCode.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="layui.js"></script>
+    <script>
+        layui.use(['layer', 'form'], function(){
+            layer=layui.layer;
+        });
+        var URL={
+            QQ:"null",
+            WX:"null",
+            AL:"null"
+        };
+        function preview(e,param,UA){
+            console.log("调用了preview");
+            analyticCode.getUrl(param,e,function(url1,url2){
+                console.log(url1);
+                switch (UA) {
+                    case "QQ":
+                        var i=url1.match(/i.qianbao.qq.com/i);
+                        if(!i){
+                            layer.msg('<i class="layui-icon layui-icon-face-cry" style="font-size: 30px; color: #FF9933;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您上传的不是QQ收款二维码');
+                            return 0;
+                        }
+                        var ele=document.getElementsByClassName("QQ")[0];
+                        break;
+                    case "WX":
+                        var i=url1.match(/wxp:\/\//i);
+                        if(!i){
+                            layer.msg('<i class="layui-icon layui-icon-face-cry" style="font-size: 30px; color: #FF9933;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您上传的不是微信收款二维码');
+                            return 0;
+                        }
+                        var ele=document.getElementsByClassName("WX")[0];
+                        break;
+                    case "AL":
+                        var i=url1.match(/QR.ALIPAY.COM/i);
+                        if(!i){
+                            layer.msg('<i class="layui-icon layui-icon-face-cry" style="font-size: 30px; color: #FF9933;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您上传的不是支付宝收款二维码');
+                            return 0;
+                        }
+                        var ele=document.getElementsByClassName("AL")[0];
+                        break;
+                }
+                URL[UA]=url1;
+                ele.setAttribute("value",url1);
+                console.log(URL);
+            });
+        }
+        function ajax(opts){
+            var xhr = new XMLHttpRequest(); //创建ajax对象
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status == 200) {
+                    opts.success(xhr.responseText)
+                } else if (xhr.readyState === 4 && xhr.status !== 200) {
+                    opts.error();
+                }
+            };
+            var urlStr='';
+            for(var key in opts.data) {
+                urlStr += key + '=' + opts.data[key] + "&";
+            }
+            urlStr=urlStr.substring(0, urlStr.length-1);
+            console.log(urlStr);
+            if(opts.type.toLowerCase()==='get'){
+                xhr.open(opts.type, opts.url+ ' ?' + urlStr, true);
+                xhr.send()
+            }
+            if(opts.type.toLowerCase()==='post'){
+                xhr.open('post', opts.url, true);
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhr.send(urlStr);
+            }
+        }
+        function upload() {
+            try {
+                ajax({
+                    url: "code.php",
+                    type: "post",
+                    data: {
+                        "storage": 123,
+                        "QQ": URL.QQ.replace(/&/g, "*"),
+                        "WX": URL.WX.replace(/&/g, "*"),
+                        "AL": URL.AL.replace(/&/g, "*")
+                    },
+                    success: function (data) {
+                        if (data === "WX") {
+                            layer.msg('<i class="layui-icon layui-icon-face-cry" style="font-size: 30px; color: #FF9933;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微信收款码出错，请检查后重试');
+                        } else if (data === "QQ") {
+                            layer.msg('<i class="layui-icon layui-icon-face-cry" style="font-size: 30px; color: #FF9933;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ收款码出错，请检查后重试');
+                        } else if (data === "AL") {
+                            layer.msg('<i class="layui-icon layui-icon-face-cry" style="font-size: 30px; color: #FF9933;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;支付宝收款码出错，请检查后重试');
+                        } else if(data === "null"){
+                            layer.msg('<i class="layui-icon layui-icon-face-cry" style="font-size: 30px; color: #FF9933;"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择二维码！');
+                        } else {
+                            console.log(data);
+                            var qrimg=document.getElementById("qrcode");
+                            if(qrimg.innerHTML!==""){
+                                qrcode.clear();
+                                qrcode.makeCode(data);
+                            } else{
+                                qrcode = new QRCode(qrimg, {
+                                    text: data,
+                                    width: 560,
+                                    height: 560,
+                                    colorDark : "#000000",
+                                    colorLight : "#ffffff",
+                                    correctLevel : QRCode.CorrectLevel.H
+                                });
+                            }
+                            setTimeout(function(){//等待3秒后绘制二维码
+                                var c=document.getElementById("result");
+                                var ctx=c.getContext("2d");
+                                ctx.drawImage(document.getElementsByTagName("img")[1],0,0); //背景图
+                                ctx.font="70px Arial";
+                                ctx.fillStyle="white";
+                                ctx.textAlign='center';//文字居中
+                                ctx.textBaseline='middle';
+                                ctx.fillText("扫一扫向“"+document.getElementById("username").value+"”付款",450,100);//生成文字
+                                ctx.drawImage(document.getElementsByTagName("img")[0],160,220);//生成的二维码
+
+
+                                var imgURI = c.toDataURL("image/png");
+                                document.getElementById("show").setAttribute("src",imgURI);
+                            },3000);
+
+                        }
+                    },
+                    error: function () {
+                        console.log("发生错误");
+                    }
+                });
+            }catch (e) {
+                console.log("发生错误");
+            }
+        }
+
+    </script>
+</body>
+</html>
