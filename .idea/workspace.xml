@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0b88009-0757-461c-88bc-932d2ac3799a" name="Default Changelist" comment="" />
+    <list default="true" id="a0b88009-0757-461c-88bc-932d2ac3799a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/myjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.php" beforeDir="false" afterPath="$PROJECT_DIR$/code.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qrcode.json" beforeDir="false" afterPath="$PROJECT_DIR$/qrcode.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="18" column="105" selection-start-line="18" selection-start-column="105" selection-end-line="18" selection-end-column="105" />
+            <state relative-caret-position="171">
+              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -24,6 +31,72 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="7" selection-start-column="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="71" column="186" selection-start-line="71" selection-start-column="186" selection-end-line="71" selection-end-column="186" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/myjs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="100" column="35" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
+              <caret line="99" column="35" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#87#93#0" expanded="true" />
+                <element signature="e#93#99#0" expanded="true" />
+                <element signature="e#99#105#0" expanded="true" />
+                <element signature="e#105#111#0" expanded="true" />
+                <element signature="e#111#117#0" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#87#93#0" expanded="true" />
+                <element signature="e#93#99#0" expanded="true" />
+                <element signature="e#99#105#0" expanded="true" />
+                <element signature="e#105#111#0" expanded="true" />
+                <element signature="e#111#117#0" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#87#93#0" expanded="true" />
+                <element signature="e#93#99#0" expanded="true" />
+                <element signature="e#99#105#0" expanded="true" />
+                <element signature="e#105#111#0" expanded="true" />
+                <element signature="e#111#117#0" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#87#93#0" expanded="true" />
+                <element signature="e#93#99#0" expanded="true" />
+                <element signature="e#99#105#0" expanded="true" />
+                <element signature="e#105#111#0" expanded="true" />
+                <element signature="e#111#117#0" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#87#93#0" expanded="true" />
+                <element signature="e#93#99#0" expanded="true" />
+                <element signature="e#99#105#0" expanded="true" />
+                <element signature="e#105#111#0" expanded="true" />
+                <element signature="e#111#117#0" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#87#93#0" expanded="true" />
+                <element signature="e#93#99#0" expanded="true" />
+                <element signature="e#99#105#0" expanded="true" />
+                <element signature="e#105#111#0" expanded="true" />
+                <element signature="e#111#117#0" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#87#93#0" expanded="true" />
+                <element signature="e#93#99#0" expanded="true" />
+                <element signature="e#99#105#0" expanded="true" />
+                <element signature="e#105#111#0" expanded="true" />
+                <element signature="e#111#117#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,14 +112,18 @@
       <find>alert</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/qrcode.json" />
         <option value="$PROJECT_DIR$/analyticCode.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/code.php" />
+        <option value="$PROJECT_DIR$/js/myjs.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -56,6 +133,7 @@
     <option name="width" value="2100" />
     <option name="height" value="1322" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -67,6 +145,11 @@
             <path>
               <item name="qrcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="qrcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qrcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qrcode" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qrcode" type="b2602c69:ProjectViewProjectNode" />
@@ -84,6 +167,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\phpwamp\phpwamp\server\Nginx-PHPWNMP\htdocs\qrcode\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -120,16 +208,15 @@
       <workItem from="1550028888930" duration="483000" />
       <workItem from="1550029474414" duration="1440000" />
       <workItem from="1550059777567" duration="16590000" />
-      <workItem from="1550117121558" duration="21034000" />
+      <workItem from="1550117121558" duration="26650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39547000" />
+    <option name="totallyTimeSpent" value="45163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1477" height="807" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15693174" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -145,7 +232,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.21270311" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.21301775" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3293944" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -201,6 +288,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/qrcode.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -208,14 +302,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/myjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-550">
-          <caret line="174" column="166" selection-start-line="174" selection-start-column="166" selection-end-line="174" selection-end-column="166" />
+        <state relative-caret-position="266">
+          <caret line="100" column="35" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
+          <caret line="99" column="35" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
           <folding>
-            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
             <element signature="e#87#93#0" expanded="true" />
             <element signature="e#93#99#0" expanded="true" />
@@ -262,10 +354,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code.php">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="18" column="105" selection-start-line="18" selection-start-column="105" selection-end-line="18" selection-end-column="105" />
+        <state relative-caret-position="209">
+          <caret line="71" column="186" selection-start-line="71" selection-start-column="186" selection-end-line="71" selection-end-column="186" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -37,7 +37,7 @@
             $QQ_BL=preg_match("/i.qianbao.qq.com/i",$QQ);
             $WX_BL=preg_match("/wxp:\/\//i",$WX);
             $AL_BL=preg_match("/QR.ALIPAY.COM/i",$AL);
-            if(!$QQ_BL&&!$QQ!=="null"){  //若未匹配上且不未空 报错
+            if(!$QQ_BL&&$QQ!=="null"){  //若未匹配上且不未空 报错
                 echo "QQ";
                 return 0;
             }else if(!$WX_BL&&$WX!=="null"){  //若未匹配上 表示二维码错误 给予提示
